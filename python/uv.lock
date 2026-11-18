@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 5
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.14'",
@@ -908,6 +908,22 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/bb/29/745f7d30d47fe0f251d3ad3dc2978a23141917661998763bebb6da007eb1/filetype-1.2.0.tar.gz", hash = "sha256:66b56cd6474bf41d8c54660347d37afcc3f7d1970648de365c102ef77548aadb", size = 998020, upload-time = "2022-11-02T17:34:04.141Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/18/79/1b8fa1bb3568781e84c9200f951c735f3f157429f44be0495da55894d620/filetype-1.2.0-py2.py3-none-any.whl", hash = "sha256:7ce71b6880181241cf7ac8697a2f1eb6a8bd9b429f7ad6d27b8db9ba5f1c2d25", size = 19970, upload-time = "2022-11-02T17:34:01.425Z" },
+]
+
+[[package]]
+name = "fin-primitives"
+version = "3.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b0/20/f41620ee0a749e1b319727765f9f49f0e3a9cc52e50e215a863ad402e6cd/fin_primitives-3.9.0.tar.gz", hash = "sha256:cae7038106373b4824781975c7e12fd6be791de27c0f267a1ac59f7a1bdf7c21", size = 1337425, upload-time = "2026-11-18T16:21:02.785Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fa/ad/53134d0a39b7c2bfce792f99640aecddad4b170ea51dc21e781d23573429/fin_primitives-3.9.0-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:0d3afd596921b4b65dd79cf49b6b88c8286b2f6715340f07f5654d0ecc50e67f", size = 2052801, upload-time = "2026-11-18T16:20:46.432Z" },
+    { url = "https://files.pythonhosted.org/packages/68/57/042b7aad81145727607946a6fbb438656afca5c83134ba85e78ef555f7dd/fin_primitives-3.9.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:ebbecafb37c9eb9bc413763441b8f2b8b92123ce009774b875221f146fb60cde", size = 1867549, upload-time = "2026-11-18T16:20:48.276Z" },
+    { url = "https://files.pythonhosted.org/packages/9c/30/0c1ac6dbf296688e679965f0560bab3a385b69d133a0d10320a971308d5f/fin_primitives-3.9.0-cp39-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:ed78453dee81eedfaa9be2394e89cc5e8c5a11de06cb6ed3d5b4a09db76b4a0a", size = 1920169, upload-time = "2026-11-18T16:20:50.104Z" },
+    { url = "https://files.pythonhosted.org/packages/33/d1/4b2576662953c534ae81b068b8cfcd683648357f2e4daade1c23fb6b43b4/fin_primitives-3.9.0-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:5b1bfb65a41cd61b1feaad5a269a723ee668f3fbbb832d61a59fba895ae70691", size = 2107392, upload-time = "2026-11-18T16:20:51.908Z" },
+    { url = "https://files.pythonhosted.org/packages/14/48/8a7251a08f1e87f7ca090f87e5ba57d0e7231c112274eb22e1cb075c2e89/fin_primitives-3.9.0-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:33df9cde132cc654f1c486f4292b249288cee16dcf56922abda77f9a2025fa1c", size = 2099815, upload-time = "2026-11-18T16:20:53.733Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/1e/91e2ac7b738c9aaff6d8dd2f8df45911281d26cdc183af1f034648a63e54/fin_primitives-3.9.0-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:f6abc2103ba322ad5d035039fd5b8e2c500f73b97481d543b86f17010b53c7d9", size = 2346356, upload-time = "2026-11-18T16:20:57.573Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/33/794fd993b2bdf89b4850e71cdff948c2a5f744911d4d142484c6a820a0a8/fin_primitives-3.9.0-cp39-abi3-pyemscripten_2026_0_wasm32.whl", hash = "sha256:2eb918b504a4f119a2928917cc81be5056f220ffb88b02c34c9c6d1b254a4792", size = 1403324, upload-time = "2026-11-18T16:20:59.459Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/47/cb20d433f5c11c62baa5eebbce17adad2987654f08c953500c961bf9c349/fin_primitives-3.9.0-cp39-abi3-win_amd64.whl", hash = "sha256:17cb89dd4dda86dfc0d2a75979ae4570194a4d8ab4f7143a762e97573420d159", size = 1901680, upload-time = "2026-11-18T16:21:01.07Z" },
 ]
 
 [[package]]
@@ -3289,7 +3305,7 @@ name = "sqlalchemy"
 version = "2.0.43"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "greenlet", marker = "(python_full_version < '3.14' and platform_machine == 'AMD64') or (python_full_version < '3.14' and platform_machine == 'WIN32') or (python_full_version < '3.14' and platform_machine == 'aarch64') or (python_full_version < '3.14' and platform_machine == 'amd64') or (python_full_version < '3.14' and platform_machine == 'ppc64le') or (python_full_version < '3.14' and platform_machine == 'win32') or (python_full_version < '3.14' and platform_machine == 'x86_64')" },
+    { name = "greenlet", marker = "python_full_version < '3.14' and (platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64')" },
     { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d7/bc/d59b5d97d27229b0e009bd9098cd81af71c2fa5549c580a0a67b9bed0496/sqlalchemy-2.0.43.tar.gz", hash = "sha256:788bfcef6787a7764169cfe9859fe425bf44559619e1d9f56f5bddf2ebf6f417", size = 9762949, upload-time = "2025-08-11T14:24:58.438Z" }
@@ -3676,6 +3692,7 @@ dependencies = [
     { name = "crawl4ai" },
     { name = "edgartools" },
     { name = "fastapi" },
+    { name = "fin-primitives" },
     { name = "func-timeout" },
     { name = "loguru" },
     { name = "markdown" },
@@ -3736,6 +3753,7 @@ requires-dist = [
     { name = "diff-cover", marker = "extra == 'dev'", specifier = ">=9.0.0" },
     { name = "edgartools", specifier = ">=4.12.2" },
     { name = "fastapi", specifier = ">=0.104.0" },
+    { name = "fin-primitives", specifier = ">=3.9.0" },
     { name = "func-timeout", specifier = ">=4.3.5" },
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "markdown", specifier = ">=3.9" },

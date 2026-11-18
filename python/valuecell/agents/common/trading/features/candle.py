@@ -3,6 +3,7 @@ from typing import Dict, List, Optional
 
 import numpy as np
 import pandas as pd
+from fin_primitives import ta as fp_ta
 
 from valuecell.agents.common.trading.constants import (
     FEATURE_GROUP_BY_INTERVAL_PREFIX,
@@ -56,18 +57,14 @@ class SimpleCandleFeatureComputer(CandleBasedFeatureComputer):
             df["macd_signal"] = df["macd"].ewm(span=9, adjust=False).mean()
             df["macd_histogram"] = df["macd"] - df["macd_signal"]
 
-            # RSI
-            delta = df["close"].diff()
-            gain = delta.clip(lower=0).rolling(window=14).mean()
-            loss = (-delta).clip(lower=0).rolling(window=14).mean()
-            rs = gain / loss.replace(0, np.inf)
-            df["rsi"] = 100 - (100 / (1 + rs))
+            # RSI (Wilder smoothing), same values as pandas-ta / TA-Lib
+            df["rsi"] = fp_ta.rsi(df["close"], length=14)
 
-            # Bollinger Bands
-            df["bb_middle"] = df["close"].rolling(window=20).mean()
-            bb_std = df["close"].rolling(window=20).std()
-            df["bb_upper"] = df["bb_middle"] + (bb_std * 2)
-            df["bb_lower"] = df["bb_middle"] - (bb_std * 2)
+            # Bollinger Bands (population std), same values as pandas-ta / TA-Lib
+            bbands = fp_ta.bbands(df["close"], length=20, std=2)
+            df["bb_lower"] = bbands["BBL_20_2.0"]
+            df["bb_middle"] = bbands["BBM_20_2.0"]
+            df["bb_upper"] = bbands["BBU_20_2.0"]
 
             last = df.iloc[-1]
             prev = df.iloc[-2] if len(df) > 1 else last
